@@ -293,6 +293,111 @@
 // var a = 10
 // let b = 20
 
+//funtion currying
+
+//without curry
+
+// function test(a, b, c) {
+//   console.log(a+b+c)
+// }
+
+// test(1, 2, 3)
+
+// //with curry
+
+// function test1(a) {
+//  return function test2(b) {
+//   return  function test3(c) {
+//       console.log(a+b+c)
+//     }
+//   }
+// }
+
+// // test1(1)(2)(3)
+// var test2 = test1(1)
+// var test3 = test2(2)
+// test3(3)
+
+//without curry
+
+// function calDis(price, dis) {
+//   var disAmount = price * dis
+//   console.log(disAmount)
+// }
+
+// calDis(1000, .1)
+// calDis(1000, .2)
+// calDis(1000, .3)
+// calDis(1000, .4)
+// calDis(1000, .5)
+
+// function calPrice(price) {
+//   return function calDis(dis) {
+//     var disAmount = price * dis
+//     console.log(disAmount)
+//   }
+// }
+// var calDis = calPrice(1000)
+// calDis(.1)
+// calDis(.2)
+// calDis(.3)
+// calDis(.4)
+// calDis(.5)
+
+
+//first class fun
+
+// var x = function(cb) {
+//  return function test() {
+    
+//   }
+// }
+// x(function cb(){})
+
+//HOF
+
+// function hof(cb) {
+//   console.log('Hof')
+//   return function () {
+//    console.log('Hi')
+//  }
+// }
+// var hello = hof()
+// hello()
+
+
+//pure vs impure
+
+// function pure(a,b,c) {
+//   console.log(a + b + c)
+  
+// }
+// pure(1, 2, 3)
+
+// function impure(a,b,c) {
+//   var d = Math.random()
+//   console.log(a + b + c + d)
+  
+// }
+// impure(1,2,3)
+
+// Recursion function:
+
+// function factorial(n) {
+//   if (n <= 0) {
+//     return 1;
+//   } else {
+//     return n * factorial(n - 1);
+//   }
+// }
+// console.log(factorial(5))
+
+
+
+
+
+
+
 
 
 
