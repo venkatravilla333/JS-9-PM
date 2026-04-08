@@ -110,13 +110,13 @@
 
 //object
 
-var orginalObj = {
-  name: 'sachiin',
-  address: {road: 101},
-  play: function () {
-    console.log('play')
-  }
-}
+// var orginalObj = {
+//   name: 'sachiin',
+//   address: {road: 101},
+//   play: function () {
+//     console.log('play')
+//   }
+// }
 
 // console.log(orginalObj)
 
@@ -143,3 +143,106 @@ var orginalObj = {
 
 // console.log(orginalObj)
 // console.log(copiedObj)
+
+//template string
+
+// var name = 'sachin'
+// var age = 45
+
+// console.log('Hi this is' + ' ' + name + ' ' + 'My age is' + ' ' + age) //ES-5
+// console.log(`Hi this is ${name} My age is ${age}`) //ES-6
+// console.log(
+//   `Hi
+//   Hello
+//   Bye`)
+
+// console.log(Math)
+
+// console.log(Math.min(5,2,9))
+// console.log(Math.max(5,2,9))
+// console.log(Math.ceil(5.2))
+// console.log(Math.ceil(5.9))
+// console.log(Math.floor(5.2))
+// console.log(Math.floor(5.9))
+// console.log(Math.round(5.2))
+// console.log(Math.round(5.5))
+// console.log(Math.round(5.9))
+// console.log(Math.random())
+
+//Date object
+
+// var now = new Date()
+// console.log(now)
+
+//get methods
+// console.log(now.getFullYear())
+// console.log(now.getDate())
+// console.log(now.getMonth())
+// console.log(now.getDay())
+// console.log(now.getHours())
+// console.log(now.getMinutes())
+// console.log(now.getSeconds())
+
+//set methods
+
+// now.setFullYear(2050)
+// now.setMonth(6)
+// now.setHours(8)
+// console.log(now)
+
+// var date1 = new Date(2040, 3, 9, 5, 20, 30)
+// console.log(date1)
+// console.log(date1.getFullYear())
+// console.log(now.getDate())
+// console.log(now.getMonth())
+// console.log(now.getDay())
+// console.log(now.getHours())
+// console.log(now.getMinutes())
+// console.log(now.getSeconds())
+
+//set methods
+
+// date1.setFullYear(2070)
+// date1.setMonth(6)
+// date1.setHours(8)
+// console.log(date1)
+// console.log(date1)
+
+
+//String object
+
+var msg = 'Hi How are You'
+console.log(msg)
+// console.log(msg.length)//how to find string length
+
+// console.log(msg.trimStart().length)//how to remove empty spaces
+// console.log(msg.trimEnd().length)//how to remove empty spaces
+// console.log(msg.trim().length)//how to remove empty spaces
+
+//How to copy string
+
+// console.log(msg.slice())
+// console.log(msg.slice(0))
+// console.log(msg.slice(0, 5))
+// console.log(msg.slice(-5))
+
+// console.log(msg.substring())
+// console.log(msg.substring(0))
+// console.log(msg.substring(0, 5))
+// console.log(msg.substring(-5))
+
+//How to extract a string char
+
+// console.log(msg.charAt(0))
+// console.log(msg.charCodeAt(0))
+
+//How to convert string case
+
+// console.log(msg.toUpperCase())
+// console.log(msg.toLowerCase())
+
+
+
+
+
+
