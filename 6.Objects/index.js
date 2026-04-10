@@ -211,7 +211,8 @@
 
 //String object
 
-var msg = 'Hi How are You'
+var msg = 'Hi How are Hi You Hi'
+// var msg = 'Hi'
 console.log(msg)
 // console.log(msg.length)//how to find string length
 
@@ -240,6 +241,48 @@ console.log(msg)
 
 // console.log(msg.toUpperCase())
 // console.log(msg.toLowerCase())
+
+//how to add new string to the end of the string
+
+// console.log(msg.concat(' sachin'))
+
+//how to replace string with new string
+
+// console.log(msg.replace('you', 'me'))
+
+//How to convert string into array
+
+// console.log(msg.split())
+// console.log(msg.split(''))
+// console.log(msg.split(' '))
+
+//How to add or pad new string
+
+// console.log(msg.padStart(5, 2))
+// console.log(msg.padEnd(5, 2))
+
+//How to find specific string
+
+// console.log(msg.indexOf('Hi'))
+// console.log(msg.indexOf('bye'))
+// console.log(msg.lastIndexOf('Hi'))
+// console.log(msg.lastIndexOf('bye'))
+// console.log(msg.includes('Hi'))
+// console.log(msg.includes('bye'))
+// console.log(msg.startsWith('Hi'))
+// console.log(msg.startsWith('bye'))
+// console.log(msg.endsWith('Hi'))
+// console.log(msg.endsWith('bye'))
+
+
+
+
+
+
+
+
+
+
 
 
 
