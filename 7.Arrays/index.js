@@ -217,6 +217,53 @@
 // console.log(flattenArr)
 
 
+//sorting
+
+//primitives
+
+//string
+
+// var arr = ['gill', 'sachin', 'dhoni', 'rahul', 'kohli']
+// var arr = [3, 1, 8, 5, 4]
+// var arr = [3, 1, 8, 5, 14]
+// var arr = [{name: 'gill'}, {name: 'sachin'}, {name: 'dhoni'}, {name: 'rahul'}, {name: 'kohli'}]
+// console.log(arr)
+
+// var ASO = arr.sort()
+// var DSO = arr.reverse()
+// console.log(ASO)
+// console.log(DSO)
+
+// var ASO = arr.sort((a, b) => {
+//   if (a > b) {
+//     return -1
+//   } else {
+//     return 1
+//   }
+// })
+// console.log(ASO)
+
+// var ASO = arr.sort((a, b) => {
+//   if (a.name > b.name) {
+//     return -1
+//   } else {
+//     return 1
+//   }
+// })
+// console.log(ASO)
+
+// for (var i = 0; i < arr.length; i++){
+//   for (var j = i + 1; j < arr.length; j++){
+//     if (arr[i].name > arr[j].name) {
+//       var temp = arr[i].name
+//       arr[i].name = arr[j].name
+//       arr[j].name = temp
+//     }
+//   }
+// }
+// console.log(arr)
+
+
 
 
 
