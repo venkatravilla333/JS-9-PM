@@ -234,12 +234,12 @@
 // table.addEventListener('click', tableFun)
 
 
-var btn = document.getElementById('btn')
+// var btn = document.getElementById('btn')
 
-function btnClick() {
-  console.log('clicked')
-}
-btn.addEventListener('click', btnClick)
+// function btnClick() {
+//   console.log('clicked')
+// }
+// btn.addEventListener('click', btnClick)
 
 
 
