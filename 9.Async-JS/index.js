@@ -101,6 +101,131 @@ function fetchData(num) {
 // displayData()
 
 
+//get data
+
+// https://jsonplaceholder.typicode.com/posts
+
+var getBtn = document.getElementById('getdata')
+var body = document.getElementById('body')
+
+function getData() {
+  fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((res) => {
+     return res.json()
+    }).then((posts) => {
+      console.log(posts)
+      posts.forEach((post) => {
+        var para = document.createElement('p')
+        console.log(para)
+        para.textContent = post.title
+        body.appendChild(para)
+      })
+    }).catch((err) => {
+     console.log(err)
+  })
+
+}
+
+getBtn.addEventListener('click', getData)
+
+
+//get single data
+
+var getsingleBtn = document.getElementById('getsingledata')
+
+function getSingleData() {
+  fetch('https://jsonplaceholder.typicode.com/posts/10')
+    .then((res) => {
+     return res.json()
+    }).then((post) => {
+      console.log(post)
+    }).catch((err) => {
+     console.log(err)
+  })
+
+}
+
+getsingleBtn.addEventListener('click', getSingleData)
+
+//send data
+
+var newData = {
+  userId: 110,
+  title: 'My title',
+  body: 'My body'
+}
+
+var sendBtn = document.getElementById('senddata')
+
+function sendData() {
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'Application/json',
+    },
+    body: JSON.stringify(newData)
+  }).then((res) => {
+    console.log(res)
+    return res.json()
+  }).then((data) => {
+    console.log(data)
+  }).catch((err) => {
+     console.log(err)
+  })
+}
+
+sendBtn.addEventListener('click', sendData)
+
+
+//update data
+
+var updateBtn = document.getElementById('updatedata')
+
+function updateData() {
+  fetch('https://jsonplaceholder.typicode.com/posts/10', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'Application/json',
+    },
+    body: JSON.stringify(newData)
+  }).then((res) => {
+    console.log(res)
+    return res.json()
+  }).then((data) => {
+    console.log(data)
+  }).catch((err) => {
+     console.log(err)
+  })
+}
+
+
+updateBtn.addEventListener('click', updateData)
+
+//delete data
+
+var deleteBtn = document.getElementById('deletedata')
+
+function deleteData() {
+  fetch('https://jsonplaceholder.typicode.com/posts/10', {
+    method: 'DELETE',
+  }).then((res) => {
+    console.log(res)
+    return res.json()
+  }).then((data) => {
+    console.log(data)
+  }).catch((err) => {
+     console.log(err)
+  })
+}
+
+
+deleteBtn.addEventListener('click', deleteData)
+
+
+
+
+
+
 
 
 
