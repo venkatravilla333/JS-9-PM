@@ -76,15 +76,15 @@
 
 //async & await
 
-function fetchData(num) {
-  return new Promise((res, rej) => {
-    setTimeout(() => {
-      // var data = 'data from db'
-      var data = num * num
-      res(data)
-    }, 4000)
-  })
-}
+// function fetchData(num) {
+//   return new Promise((res, rej) => {
+//     setTimeout(() => {
+//       // var data = 'data from db'
+//       var data = num * num
+//       res(data)
+//     }, 4000)
+//   })
+// }
 
 
 
@@ -105,125 +105,146 @@ function fetchData(num) {
 
 // https://jsonplaceholder.typicode.com/posts
 
-var getBtn = document.getElementById('getdata')
-var body = document.getElementById('body')
+// var getBtn = document.getElementById('getdata')
+// var body = document.getElementById('body')
 
-function getData() {
-  fetch('https://jsonplaceholder.typicode.com/posts')
-    .then((res) => {
-     return res.json()
-    }).then((posts) => {
-      console.log(posts)
-      posts.forEach((post) => {
-        var para = document.createElement('p')
-        console.log(para)
-        para.textContent = post.title
-        body.appendChild(para)
-      })
-    }).catch((err) => {
-     console.log(err)
-  })
+// function getData() {
+//   fetch('https://jsonplaceholder.typicode.com/posts')
+//     .then((res) => {
+//      return res.json()
+//     }).then((posts) => {
+//       console.log(posts)
+//       posts.forEach((post) => {
+//         var para = document.createElement('p')
+//         console.log(para)
+//         para.textContent = post.title
+//         body.appendChild(para)
+//       })
+//     }).catch((err) => {
+//      console.log(err)
+//   })
 
-}
+// }
 
-getBtn.addEventListener('click', getData)
-
-
-//get single data
-
-var getsingleBtn = document.getElementById('getsingledata')
-
-function getSingleData() {
-  fetch('https://jsonplaceholder.typicode.com/posts/10')
-    .then((res) => {
-     return res.json()
-    }).then((post) => {
-      console.log(post)
-    }).catch((err) => {
-     console.log(err)
-  })
-
-}
-
-getsingleBtn.addEventListener('click', getSingleData)
-
-//send data
-
-var newData = {
-  userId: 110,
-  title: 'My title',
-  body: 'My body'
-}
-
-var sendBtn = document.getElementById('senddata')
-
-function sendData() {
-  fetch('https://jsonplaceholder.typicode.com/posts', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'Application/json',
-    },
-    body: JSON.stringify(newData)
-  }).then((res) => {
-    console.log(res)
-    return res.json()
-  }).then((data) => {
-    console.log(data)
-  }).catch((err) => {
-     console.log(err)
-  })
-}
-
-sendBtn.addEventListener('click', sendData)
+// getBtn.addEventListener('click', getData)
 
 
-//update data
+// //get single data
 
-var updateBtn = document.getElementById('updatedata')
+// var getsingleBtn = document.getElementById('getsingledata')
 
-function updateData() {
-  fetch('https://jsonplaceholder.typicode.com/posts/10', {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'Application/json',
-    },
-    body: JSON.stringify(newData)
-  }).then((res) => {
-    console.log(res)
-    return res.json()
-  }).then((data) => {
-    console.log(data)
-  }).catch((err) => {
-     console.log(err)
-  })
-}
+// function getSingleData() {
+//   fetch('https://jsonplaceholder.typicode.com/posts/10')
+//     .then((res) => {
+//      return res.json()
+//     }).then((post) => {
+//       console.log(post)
+//     }).catch((err) => {
+//      console.log(err)
+//   })
+
+// }
+
+// getsingleBtn.addEventListener('click', getSingleData)
+
+// //send data
+
+// var newData = {
+//   userId: 110,
+//   title: 'My title',
+//   body: 'My body'
+// }
+
+// var sendBtn = document.getElementById('senddata')
+
+// function sendData() {
+//   fetch('https://jsonplaceholder.typicode.com/posts', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'Application/json',
+//     },
+//     body: JSON.stringify(newData)
+//   }).then((res) => {
+//     console.log(res)
+//     return res.json()
+//   }).then((data) => {
+//     console.log(data)
+//   }).catch((err) => {
+//      console.log(err)
+//   })
+// }
+
+// sendBtn.addEventListener('click', sendData)
 
 
-updateBtn.addEventListener('click', updateData)
+// //update data
 
-//delete data
+// var updateBtn = document.getElementById('updatedata')
 
-var deleteBtn = document.getElementById('deletedata')
-
-function deleteData() {
-  fetch('https://jsonplaceholder.typicode.com/posts/10', {
-    method: 'DELETE',
-  }).then((res) => {
-    console.log(res)
-    return res.json()
-  }).then((data) => {
-    console.log(data)
-  }).catch((err) => {
-     console.log(err)
-  })
-}
-
-
-deleteBtn.addEventListener('click', deleteData)
-
+// function updateData() {
+//   fetch('https://jsonplaceholder.typicode.com/posts/10', {
+//     method: 'PUT',
+//     headers: {
+//       'Content-Type': 'Application/json',
+//     },
+//     body: JSON.stringify(newData)
+//   }).then((res) => {
+//     console.log(res)
+//     return res.json()
+//   }).then((data) => {
+//     console.log(data)
+//   }).catch((err) => {
+//      console.log(err)
+//   })
+// }
 
 
+// updateBtn.addEventListener('click', updateData)
 
+// //delete data
+
+// var deleteBtn = document.getElementById('deletedata')
+
+// function deleteData() {
+//   fetch('https://jsonplaceholder.typicode.com/posts/10', {
+//     method: 'DELETE',
+//   }).then((res) => {
+//     console.log(res)
+//     return res.json()
+//   }).then((data) => {
+//     console.log(data)
+//   }).catch((err) => {
+//      console.log(err)
+//   })
+// }
+
+
+// deleteBtn.addEventListener('click', deleteData)
+
+
+var pr1 = new Promise((res, rej) => {
+  setTimeout(() => {
+    var data = 'PR-1'
+    rej(data)
+  }, 4000)
+})
+var pr2 = new Promise((res, rej) => {
+  setTimeout(() => {
+    var data = 'PR-2'
+    rej(data)
+  }, 1000)
+})
+var pr3 = new Promise((res, rej) => {
+  setTimeout(() => {
+    var data = 'PR-3'
+    rej(data)
+  }, 2000)
+})
+
+// Promise.all([pr1, pr2, pr3]).then((res)=>console.log(res))
+// Promise.allSettled([pr1, pr2, pr3]).then((res)=>console.log(res))
+// Promise.race([pr1, pr2, pr3]).then((res)=>console.log(res))
+// Promise.any([pr1, pr2, pr3]).then((res)=>console.log(res))
 
 
 
