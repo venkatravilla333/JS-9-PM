@@ -53,21 +53,93 @@
 // obj1.outer()
 
 
-class Test{
-  constructor(name, age) {
-    console.log(this)
-    this.name = name;
-    this.age = age;
-    this.outer = function () {
-      console.log(this)
-      var inner = function() {
-        console.log(this)
-      }
-      inner()
-    }
-  }
-}
+// class Test{
+//   constructor(name, age) {
+//     console.log(this)
+//     this.name = name;
+//     this.age = age;
+//     this.outer = function () {
+//       console.log(this)
+//       var inner = function() {
+//         console.log(this)
+//       }
+//       inner()
+//     }
+//   }
+// }
 
-var person1 = new Test('sachin', 45)
-console.log(typeof Test)
-person1.outer()
+// var person1 = new Test('sachin', 45)
+// console.log(typeof Test)
+// person1.outer()
+
+
+
+// var person = {
+//   name: 'sachin',
+//   age: 45
+// }
+
+// function test(a,b,c) {
+//   console.log(this)
+//   console.log(a,b,c)
+// }
+// var test = (a,b,c)=> {
+//   console.log(this)
+//   console.log(a,b,c)
+// }
+// test(1,2,3)
+// test.call(person, 1,2,3)
+// test.apply(person, [1,2,3])
+// test.bind(person, 1,2,3)()
+
+
+// var person = {
+//   name: 'sachin',
+//   age: 45,
+//   outer: function () {
+//     var inner = ()=> {
+//       console.log(this)
+//     }
+//     inner()
+    // inner.call(person, 1,2,3)
+    // inner.apply(person, [])
+//     // inner.bind(person)()
+//   }
+// }
+
+// person.outer()
+
+
+// function Test(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   this.outer = function () {
+//     var inner = ()=> {
+//       console.log(this)
+//     }
+//     inner()
+//     // inner.call(person)
+//     // inner.apply(person)
+//     // inner.bind(person)()
+//   }
+// }
+
+// var person = new Test('sachin', 45)
+// person.outer()
+
+
+// class Test{
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//     this.outer = function () {
+//       var inner = function () {
+//         console.log(this)
+//       }
+//       inner()
+//     }
+//   }
+   
+// }
+// var person = new Test('sachin', 45)
+// person.outer()
