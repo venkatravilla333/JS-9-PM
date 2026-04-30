@@ -33,5 +33,26 @@
 // x.push(20)
 // console.log(x)
 
+// console.log('start')
+// try {
+// console.log('hi')
+// console.log(x)
+// } catch (error) {
+//   console.log(error)
+// }
+// console.log('bye')
+
+
+// var age = 16
+
+// if (age >= 18) {
+//   console.log('Having vote')
+// } else {
+//   throw new Error('Age must be >=18')
+// }
+
+
+
+
 
 
